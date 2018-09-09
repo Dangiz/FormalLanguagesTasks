@@ -1,5 +1,6 @@
 
 fun main(args : Array<String>) {
     var readerXML=AutomatonXmlReader()
-    println(readerXML.readAutomaton("C:\\Users\\dangiz\\Desktop\\New Text Document.xml").maxString("aaa",0, listOf("2")))
+    val auto=readerXML.readAutomaton("C:\\Users\\dangiz\\Documents\\GitHub\\FormalLanguagesTasks\\resources\\IntMachine.xml").maxString("+21111",0, listOf("digitFounded"))
+    println(auto)
 }

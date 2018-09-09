@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="IntAutomaton" startState="0">
+    <state name="0">
+        <transition symbol="+">
+            <destinationState name="signFounded"/>
+        </transition>
+        <transition symbol="-">
+            <destinationState name="signFounded"/>
+        </transition>
+    </state>
+    <state name="signFounded">
+        <transition symbol="1">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="2">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="3">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="4">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="5">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="6">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="7">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="8">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="9">
+            <destinationState name="digitFounded"/>
+        </transition>
+    </state>
+    <state name="digitFounded">
+        <transition symbol="0">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="1">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="2">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="3">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="4">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="5">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="6">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="7">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="8">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="9">
+            <destinationState name="digitFounded"/>
+        </transition>
+    </state>
+</automaton>
