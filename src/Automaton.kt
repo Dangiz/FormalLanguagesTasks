@@ -12,7 +12,7 @@ class Automaton(private val transitions: List<AutomatonTransition>,private val s
                 for(results in currentStates.map { it->transitionFunction(it,string[i]) })
                    newStates.addAll(results)
                 if(newStates.any { it->endStates.contains(it) })
-                    result=Pair(true,i)
+                    result=Pair(true,i-k+1)
                 currentStates=newStates.filter { it->!endStates.contains(it) }
             }
         return result

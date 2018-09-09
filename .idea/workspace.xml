@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45cd0908-c53e-4440-94ab-538f27253712" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Automaton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Automaton.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="Automaton.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="289">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -66,8 +64,8 @@
         <option value="$PROJECT_DIR$/src/AutomatonTransition.kt" />
         <option value="$PROJECT_DIR$/src/AutomatonReaderXML.kt" />
         <option value="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
-        <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/Automaton.kt" />
+        <option value="$PROJECT_DIR$/src/Main.kt" />
       </list>
     </option>
   </component>
@@ -221,12 +219,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536432897352</updated>
       <workItem from="1536432906697" duration="5653000" />
-      <workItem from="1536484851704" duration="11840000" />
+      <workItem from="1536484851704" duration="12041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17493000" />
+    <option name="totallyTimeSpent" value="17694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="-8" width="1868" height="1096" extended-state="6" />
@@ -242,18 +240,18 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32925585" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39959225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -337,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="117" selection-start-line="3" selection-start-column="117" selection-end-line="3" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -354,10 +345,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="117" selection-start-line="3" selection-start-column="117" selection-end-line="3" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="289">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
