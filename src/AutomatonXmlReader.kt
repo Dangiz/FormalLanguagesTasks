@@ -5,10 +5,9 @@ import org.xml.sax.InputSource
 import java.io.File
 import java.io.StringReader
 import javax.xml.parsers.DocumentBuilderFactory
-import kotlin.coroutines.experimental.buildSequence
 
 
-class AutomatonXmlReader() {
+class AutomatonXmlReader {
 
     private fun getTransitionsByStateNode(node: Node):List<AutomatonTransition> {
         val stateName=node.attributes.getNamedItem("name").nodeValue
@@ -35,7 +34,7 @@ class AutomatonXmlReader() {
         val transitions= mutableListOf<AutomatonTransition>()
         for(i in 1 until automatonNode.childNodes.length step 2)
             transitions.addAll(getTransitionsByStateNode(automatonNode.childNodes.item(i)))
-        return Automaton(transitions)
+        return Automaton(transitions,automatonNode.attributes.getNamedItem("startState").nodeValue)
     }
 
     private fun getXmlDocument(filePath: String): Document {
