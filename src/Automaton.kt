@@ -11,9 +11,9 @@ class Automaton(private val transitions: List<AutomatonTransition>,private val s
                 val newStates=mutableListOf<String>()
                 for(results in currentStates.map { it->transitionFunction(it,string[i]) })
                    newStates.addAll(results)
-                if(newStates.any { it->endStates.contains(it) })
-                    result=Pair(true,i-k+1)
                 currentStates=newStates.filter { it->!endStates.contains(it) }
+                if(currentStates.size<newStates.size)
+                    result=Pair(true,i-k+1)
             }
         return result
     }
