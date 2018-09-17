@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="FloatAutomaton">
+    <state name="1" endState="true">
+        <transition symbol="a">
+            <destinationState name="2"/>
+        </transition>
+        <transition symbol="b">
+            <destinationState name="2"/>
+            <destinationState name="3"/>
+        </transition>
+    </state>
+    <state name="2" startState="true">
+        <transition symbol="a">
+            <destinationState name="3"/>
+            <destinationState name="1"/>
+        </transition>
+        <transition symbol="b">
+            <destinationState name="2"/>
+        </transition>
+    </state>
+    <state name="3">
+        <transition symbol="a">
+            <destinationState name="1"/>
+        </transition>
+        <transition symbol="b">
+            <destinationState name="2"/>
+            <destinationState name="1"/>
+            <destinationState name="3"/>
+        </transition>
+    </state>
+</automaton>

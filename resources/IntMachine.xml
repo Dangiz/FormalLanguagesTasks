@@ -7,6 +7,33 @@
         <transition symbol="-">
             <destinationState name="signFounded"/>
         </transition>
+        <transition symbol="1">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="2">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="3">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="4">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="5">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="6">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="7">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="8">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol="9">
+            <destinationState name="digitFounded"/>
+        </transition>
     </state>
     <state name="signFounded">
         <transition symbol="1">

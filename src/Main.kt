@@ -1,6 +1,18 @@
+        fun main(args: Array<String>) {
+            floatMachineUnitTest()
+            //undeterminitedUnitTest()
+        }
 
-fun main(args : Array<String>) {
-    var readerXML=AutomatonXmlReader()
-    val auto=readerXML.readAutomaton("C:\\Users\\dangiz\\Documents\\GitHub\\FormalLanguagesTasks\\resources\\IntMachine.xml").maxString("+21111",0, listOf("digitFounded"))
-    println(auto)
-}
+        fun floatMachineUnitTest() {
+            val readerXML = AutomatonXmlReader()
+            val autoResult = readerXML.readAutomaton("C:\\Users\\GizatullinDA\\Downloads\\FormalLanguagesTasks-master\\resources\\FloatMachine.xml")
+                    ?.maxString("-192.168e314", 0)
+            println(autoResult)
+        }
+
+        fun undeterminitedUnitTest() {
+            val readerXML = AutomatonXmlReader()
+            val autoResult = readerXML.readAutomaton("C:\\Users\\GizatullinDA\\Downloads\\FormalLanguagesTasks-master\\resources\\NonDeterminited.xml")
+                    ?.transitionFunction("2",'a')
+            println(autoResult)
+        }
