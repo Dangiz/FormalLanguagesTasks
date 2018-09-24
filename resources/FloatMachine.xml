@@ -139,9 +139,6 @@
         <transition symbol="9">
             <destinationState name="floatDigitFounded"/>
         </transition>
-        <transition symbol=".">
-            <destinationState name="pointFounded"/>
-        </transition>
     </state>
     <state name="floatDigitFounded" endState="true">
         <transition symbol="0">

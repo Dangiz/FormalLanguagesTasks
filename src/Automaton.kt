@@ -19,4 +19,19 @@ class Automaton(private val transitions: List<AutomatonTransition>,val startStat
             }
         return result
     }
+
+    fun stringSearching(str:String):List<String> {
+        val result = mutableListOf<String>()
+        var i = 0
+        while (i < str.length) {
+            val check = maxString(str, i)
+            if (check?.first == true) {
+                result.add(str.substring(i..i + check.second - 1))
+                i += check.second
+            } else
+                i++
+
+        }
+        return  result
+    }
 }

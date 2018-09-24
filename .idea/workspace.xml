@@ -18,38 +18,28 @@
       <file leaf-file-name="Automaton.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="578">
+              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="90" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutomatonXmlReader.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NonDeterminited.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NonDeterminited.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="136">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
@@ -61,8 +51,8 @@
       <file leaf-file-name="FloatMachine.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+            <state relative-caret-position="612">
+              <caret line="141" column="12" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
               <folding>
                 <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
@@ -94,7 +84,6 @@
                 <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#state#3;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
@@ -139,10 +128,10 @@
         <option value="$PROJECT_DIR$/resources/IntMachine.xml" />
         <option value="$PROJECT_DIR$/resources/NonDeterminited.fxml" />
         <option value="$PROJECT_DIR$/resources/NonDeterminited.xml" />
+        <option value="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
         <option value="$PROJECT_DIR$/resources/FloatMachine.xml" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/Automaton.kt" />
-        <option value="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
       </list>
     </option>
   </component>
@@ -173,8 +162,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,8 +187,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,13 +371,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -404,6 +392,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -416,7 +405,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
@@ -425,6 +414,158 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="141" column="12" lean-forward="true" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="90" lean-forward="true" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -459,15 +600,29 @@
             <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -509,10 +664,32 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderImpl.java" />
     <entry file="file://$USER_HOME$/Desktop/New Text Document.xml" />
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_Collections.kt" />
+    <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+        <state relative-caret-position="612">
+          <caret line="141" column="12" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
           <folding>
             <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
@@ -544,7 +721,6 @@
             <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#3;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
@@ -557,39 +733,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="578">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="90" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
