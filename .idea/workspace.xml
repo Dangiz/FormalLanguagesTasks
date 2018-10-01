@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45cd0908-c53e-4440-94ab-538f27253712" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonTransition.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonTransition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonXmlReader.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonXmlReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/MainKt.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/MainKt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/FloatMachine.xml" afterPath="$PROJECT_DIR$/resources/FloatMachine.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Automaton.kt" afterPath="$PROJECT_DIR$/src/Automaton.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" afterPath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.kt" afterPath="$PROJECT_DIR$/src/Main.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,31 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Automaton.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Automaton.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatMachine.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FloatMachine.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding>
                 <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
@@ -57,7 +41,6 @@
                 <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
@@ -110,8 +93,8 @@
         <option value="$PROJECT_DIR$/resources/NonDeterminited.xml" />
         <option value="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
         <option value="$PROJECT_DIR$/resources/FloatMachine.xml" />
-        <option value="$PROJECT_DIR$/src/Automaton.kt" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
+        <option value="$PROJECT_DIR$/src/Automaton.kt" />
       </list>
     </option>
   </component>
@@ -673,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -691,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
           <folding>
             <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
@@ -700,7 +675,6 @@
             <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
@@ -714,6 +688,14 @@
             <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

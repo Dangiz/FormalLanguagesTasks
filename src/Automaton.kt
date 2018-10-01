@@ -53,8 +53,8 @@ class Automaton(private val transitions: List<AutomatonTransition>, val startSta
         var i = 0
         while (i < str.length) {
             val check = maxString(str, i)
-            if (check?.first == true) {
-                result.add(str.substring(i..i + check.second - 1))
+            if (check?.first) {
+                result.add(str.substring( i.until(i + check.second - 1) ))
                 i += check.second
             } else
                 i++
