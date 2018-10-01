@@ -1,11 +1,37 @@
-class AutomatonTransition(val currentState:String,val inputSymbol:Char,val resultStates:List<String>)
+class AutomatonTransition(val currentState:String,val inputSymbol:String,val resultStates:List<String>)
 
-class Automaton(private val transitions: List<AutomatonTransition>,val startStates:Set<String>,val endStates:Set<String>) {
+//Автомат определяется тройкой: набор переходов, начальных и конечных состояний
+class Automaton(private val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
 
-    fun transitionFunction(state:String,symbol:Char):List<String> {
-        return transitions.firstOrNull {it->it.currentState==state && it.inputSymbol==symbol }?.resultStates ?: listOf()
+    //Флаги для оптимизации использования ключевых слов в xml
+    private var digitKeywordFlag:Boolean
+    private var digitNotZeroKeywordFlag:Boolean
+    private var alphaKeywordFlag:Boolean
+
+    init {
+        digitKeywordFlag=transitions.any{it->it.inputSymbol=="#digit"}
+        digitNotZeroKeywordFlag=transitions.any{it->it.inputSymbol=="#digitNotZero"}
+        alphaKeywordFlag=transitions.any{it->it.inputSymbol=="#alpha"}
     }
 
+    fun transitionFunction(state:String,symbol:Char):List<String> {
+        val resultStates= mutableListOf<String>()
+        //Далее проверки для использования ключевых слов, обозначающих множество входных символов для переходов автомата
+        //Обеспечивает использование к. слова #digitNoneZero, обозначающего все цифры от 1 до 9
+        if(digitKeywordFlag && CharRange('1','9').contains(symbol))
+            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digitNotZero"}?.resultStates ?: listOf())
+        //Обеспечивает использование к. слова #digit, обозначающего все цифры
+        if(digitNotZeroKeywordFlag && symbol.isDigit())
+            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digit"}?.resultStates ?: listOf())
+        //Обеспечивает использование к. слова #digit, обозначающего все буквы
+        else if(alphaKeywordFlag && symbol.isLetter())
+            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#alpha"}?.resultStates ?: listOf())
+        //Конец проверок. Добавление всех остальных переходов по введенному символу
+        resultStates.addAll(transitions.firstOrNull {it->it.currentState==state && it.inputSymbol==symbol.toString() }?.resultStates ?: listOf())
+        return resultStates
+    }
+
+    //Вывод самого длинного соотвтетствия автомату в строке+флаг
     fun maxString(string: String,k:Int):Pair<Boolean,Int> {
         var result=Pair(startStates.any{it->endStates.contains(it)},0)
         var currentStates= startStates
@@ -20,6 +46,8 @@ class Automaton(private val transitions: List<AutomatonTransition>,val startStat
         return result
     }
 
+
+    //Вывод всех подстрок строки, удовлетворяющих поведению атвомата
     fun stringSearching(str:String):List<String> {
         val result = mutableListOf<String>()
         var i = 0

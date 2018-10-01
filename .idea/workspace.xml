@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Main.kt" line="1" />
+    <bookmark url="file://$PROJECT_DIR$/src/Main.kt" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45cd0908-c53e-4440-94ab-538f27253712" name="Default" comment="" />
+    <list default="true" id="45cd0908-c53e-4440-94ab-538f27253712" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/Automaton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonTransition.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonTransition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonXmlReader.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/AutomatonXmlReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/MainKt.class" afterPath="$PROJECT_DIR$/out/production/FormalLanguagesTasks/MainKt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/FloatMachine.xml" afterPath="$PROJECT_DIR$/resources/FloatMachine.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Automaton.kt" afterPath="$PROJECT_DIR$/src/Automaton.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" afterPath="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.kt" afterPath="$PROJECT_DIR$/src/Main.kt" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,75 +28,45 @@
       <file leaf-file-name="Automaton.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="90" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+            <state relative-caret-position="238">
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NonDeterminited.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatMachine.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FloatMachine.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="141" column="12" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
+            <state relative-caret-position="153">
+              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding>
                 <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+                <element signature="n#state#3;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
-                <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+                <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
                 <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
@@ -130,8 +110,8 @@
         <option value="$PROJECT_DIR$/resources/NonDeterminited.xml" />
         <option value="$PROJECT_DIR$/src/AutomatonXmlReader.kt" />
         <option value="$PROJECT_DIR$/resources/FloatMachine.xml" />
-        <option value="$PROJECT_DIR$/src/Main.kt" />
         <option value="$PROJECT_DIR$/src/Automaton.kt" />
+        <option value="$PROJECT_DIR$/src/Main.kt" />
       </list>
     </option>
   </component>
@@ -165,28 +145,23 @@
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="FormalLanguagesTasks-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormalLanguagesTasks-master" type="462c0819:PsiDirectoryNode" />
+              <item name="FormalLanguagesTasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormalLanguagesTasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FormalLanguagesTasks-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormalLanguagesTasks-master" type="462c0819:PsiDirectoryNode" />
+              <item name="FormalLanguagesTasks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormalLanguagesTasks" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FormalLanguagesTasks-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FormalLanguagesTasks-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,12 +346,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -392,7 +368,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -405,7 +380,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Automaton.kt</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
@@ -414,6 +397,59 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/NonDeterminited.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="141" column="12" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="90" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -443,34 +479,15 @@
             <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
@@ -520,34 +537,15 @@
             <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
@@ -592,34 +590,15 @@
             <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
             <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
@@ -678,72 +657,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
+    <entry file="file://$PROJECT_DIR$/FormalLanguagesTasks.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
+    <entry file="file://$PROJECT_DIR$/src/AutomatonXmlReader.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="141" column="12" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
-          <folding>
-            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#0;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#1;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#3;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#4;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#5;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#6;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#7;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#8;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#9;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#10;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#2;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#11;n#state#5;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
-            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="850">
+          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Automaton.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="90" lean-forward="false" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+        <state relative-caret-position="238">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FloatMachine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+          <folding>
+            <element signature="n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#0;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#1;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#state#2;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#3;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#4;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#state#5;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#6;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#state#7;n#automaton#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#state#7;n#automaton#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

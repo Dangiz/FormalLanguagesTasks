@@ -7,31 +7,7 @@
         <transition symbol="-">
             <destinationState name="signFounded"/>
         </transition>
-        <transition symbol="1">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digitNotZero">
             <destinationState name="digitFounded"/>
         </transition>
         <transition symbol=".">
@@ -39,31 +15,7 @@
         </transition>
     </state>
     <state name="signFounded">
-        <transition symbol="1">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digitNotZero">
             <destinationState name="digitFounded"/>
         </transition>
         <transition symbol=".">
@@ -71,34 +23,7 @@
         </transition>
     </state>
     <state name="digitFounded" endState="true">
-        <transition symbol="0">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="1">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="digitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digit">
             <destinationState name="digitFounded"/>
         </transition>
         <transition symbol=".">
@@ -109,66 +34,12 @@
         </transition>
     </state>
     <state name="pointFounded">
-        <transition symbol="0">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="1">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digit">
             <destinationState name="floatDigitFounded"/>
         </transition>
     </state>
     <state name="floatDigitFounded" endState="true">
-        <transition symbol="0">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="1">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="floatDigitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digit">
             <destinationState name="floatDigitFounded"/>
         </transition>
         <transition symbol="e">
@@ -182,31 +53,7 @@
         <transition symbol="-">
             <destinationState name="eSignFounded"/>
         </transition>
-        <transition symbol="1">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digitNotZero">
             <destinationState name="eDigitFounded"/>
         </transition>
         <transition symbol=".">
@@ -214,66 +61,12 @@
         </transition>
     </state>
     <state name="eSignFounded">
-        <transition symbol="0">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="1">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digit">
             <destinationState name="eDigitFounded"/>
         </transition>
     </state>
     <state name="eDigitFounded" endState="true">
-        <transition symbol="0">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="1">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="2">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="3">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="4">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="5">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="6">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="7">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="8">
-            <destinationState name="eDigitFounded"/>
-        </transition>
-        <transition symbol="9">
+        <transition symbol="#digit">
             <destinationState name="eDigitFounded"/>
         </transition>
     </state>

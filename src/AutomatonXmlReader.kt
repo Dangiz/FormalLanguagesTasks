@@ -15,7 +15,7 @@ class AutomatonXmlReader {
         for(i in 1 until node.childNodes.length step 2)
             transitions.add(AutomatonTransition(
                     stateName,
-                    node.childNodes.item(i).attributes.getNamedItem("symbol").nodeValue[0],
+                    node.childNodes.item(i).attributes.getNamedItem("symbol").nodeValue,
                     getTransitionsListByNode(node.childNodes.item(i))))
         return transitions
     }
