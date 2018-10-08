@@ -1,5 +1,6 @@
         fun main(args: Array<String>) {
-
+            keywordTest()
+            eqTest()
             floatMachineTest()
         }
 
@@ -17,3 +18,20 @@
                     ?.transitionFunction("2",'a')
             println(autoResult)
         }
+
+        fun keywordTest() {
+            val readerXML = AutomatonXmlReader()
+            var autoResult=readerXML
+                    .readAutomaton("resources/KeyWordMachine.xml")
+                    ?.stringSearching("var founded on program is boolean for string:= 0")
+            println(autoResult)
+        }
+
+        fun eqTest() {
+            val readerXML = AutomatonXmlReader()
+            var autoResult=readerXML
+                    .readAutomaton("resources/OperationEqMachine.xml")
+                    ?.stringSearching("var founded on program is boolean for string:= 0")
+            println(autoResult)
+        }
+

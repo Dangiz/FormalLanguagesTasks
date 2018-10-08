@@ -13,10 +13,24 @@ class AutomatonXmlReader {
         val stateName=node.attributes.getNamedItem("name").nodeValue
         val transitions= mutableListOf<AutomatonTransition>()
         for(i in 1 until node.childNodes.length step 2)
-            transitions.add(AutomatonTransition(
-                    stateName,
-                    node.childNodes.item(i).attributes.getNamedItem("symbol").nodeValue,
-                    getTransitionsListByNode(node.childNodes.item(i))))
+            if(node.childNodes.item(i).attributes.getNamedItem("symbol")!=null) {
+                transitions.add(AutomatonTransition(
+                        stateName,
+                        node.childNodes.item(i).attributes.getNamedItem("symbol").nodeValue,
+                        getTransitionsListByNode(node.childNodes.item(i))))
+            }
+            else if(node.childNodes.item(i).attributes.getNamedItem("word")!=null) {
+
+                var word=node.childNodes.item(i).attributes.getNamedItem("word").nodeValue
+                var lastState=stateName+" founded "+word[0]+" in word "+word+" 0"
+                transitions.add(AutomatonTransition(stateName,word[0].toString(), listOf(lastState)))
+                for (c in 1 until word.length-1){
+                    var tempState=stateName+" founded "+word[c]+" in word "+word+" "+c.toString()
+                    transitions.add(AutomatonTransition(lastState,word[c].toString(), listOf(tempState)))
+                    lastState=tempState
+                }
+                transitions.add(AutomatonTransition(lastState,word.last().toString(),getTransitionsListByNode(node.childNodes.item(i))))
+            }
         return transitions
     }
 

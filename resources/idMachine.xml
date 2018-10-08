@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="KeywordAutomaton">
+    <state name="start" startState="true">
+        <transition symbol="#alpha">
+            <destinationState name="alpha_founded"/>
+        </transition>
+    </state>
+    <state name="alpha_founded" endState="true">
+
+    </state>
+</automaton>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="KeywordAutomaton">
+    <state name="start" startState="true">
+        <transition word="var">
+            <destinationState name="var_founded"/>
+        </transition>
+        <transition word="real">
+            <destinationState name="real_founded"/>
+        </transition>
+        <transition word="program">
+            <destinationState name="program_founded"/>
+        </transition>
+        <transition word="string">
+            <destinationState name="string_founded"/>
+        </transition>
+        <transition word="boolean">
+            <destinationState name="boolean_founded"/>
+        </transition>
+        <transition word="if">
+            <destinationState name="if_founded"/>
+        </transition>
+        <transition word="then">
+            <destinationState name="then_founded"/>
+        </transition>
+        <transition word="else">
+            <destinationState name="else_founded"/>
+        </transition>
+        <transition word="for">
+            <destinationState name="for_founded"/>
+        </transition>
+        <transition word="to">
+            <destinationState name="to_founded"/>
+        </transition>
+        <transition word="do">
+            <destinationState name="do_founded"/>
+        </transition>
+        <transition word="begin">
+            <destinationState name="begin_founded"/>
+        </transition>
+        <transition word="end">
+            <destinationState name="end_founded"/>
+        </transition>
+    </state>
+    <state name="var_founded" endState="true">
+
+    </state>
+    <state name="real_founded" endState="true">
+
+    </state>
+    <state name="string_founded" endState="true">
+
+    </state>
+    <state name="boolean_founded" endState="true">
+
+    </state>
+    <state name="if_founded" endState="true">
+
+    </state>
+    <state name="then_founded" endState="true">
+
+    </state>
+    <state name="else_founded" endState="true">
+
+    </state>
+    <state name="for_founded" endState="true">
+
+    </state>
+    <state name="to_founded" endState="true">
+
+    </state>
+    <state name="do_founded" endState="true">
+
+    </state>
+    <state name="begin_founded" endState="true">
+
+    </state>
+    <state name="end_founded" endState="true">
+
+    </state>
+    <state name="program_founded" endState="true">
+
+    </state>
+</automaton>

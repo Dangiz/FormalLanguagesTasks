@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="KeywordAutomaton">
+    <state name="start" startState="true">
+        <transition word=":=">
+            <destinationState name="Eq_founded"/>
+        </transition>
+    </state>
+    <state name="Eq_founded" endState="true">
+    </state>
+</automaton>
