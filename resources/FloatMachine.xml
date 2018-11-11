@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<automaton name="FloatAutomaton">
+<automaton name="num">
     <state name="0" startState="true">
         <transition symbol="+">
             <destinationState name="signFounded"/>

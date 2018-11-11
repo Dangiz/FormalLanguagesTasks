@@ -1,7 +1,7 @@
 class AutomatonTransition(val currentState:String,val inputSymbol:String,val resultStates:List<String>)
 
 //Автомат определяется тройкой: набор переходов, начальных и конечных состояний
-class Automaton(private val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
+class Automaton(val name:String,private val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
 
     //Флаги для оптимизации использования ключевых слов в xml
     private var digitKeywordFlag:Boolean

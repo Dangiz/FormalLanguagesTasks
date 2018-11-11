@@ -60,12 +60,13 @@ class AutomatonXmlReader {
         if(File(filePath).exists()) {
             val doc = getXmlDocument(filePath)
                 val automatonNode = doc.getElementsByTagName("automaton").item(0)
-
+                val automatonName = automatonNode.attributes.getNamedItem("name").nodeValue
                 val transitions = mutableListOf<AutomatonTransition>()
                 for (i in 1 until automatonNode.childNodes.length step 2)
                     transitions.addAll(getTransitionsByStateNode(automatonNode.childNodes.item(i)))
                 val criticalStates=getStartEndStatesByNode(automatonNode)
-                return Automaton(transitions,
+                return Automaton(automatonName,
+                        transitions,
                         criticalStates.first.toSet(),
                         criticalStates.second.toSet())
         }
