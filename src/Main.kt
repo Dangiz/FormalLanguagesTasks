@@ -1,5 +1,8 @@
-        fun main(args: Array<String>) {
-            lexicalAnalysis()
+import java.io.File
+
+
+fun main(args: Array<String>) {
+            lexicalAnalysis("resources/testData/Programm_1.txt")
         }
 
         //Проверка поиска всех вещественных чисел в указанной строке
@@ -9,17 +12,23 @@
                     ?.stringSearching("qweqwe12.qweq+-123eeqwe4124adl435kasf+12.5.4e+43"))
         }
 
-        fun lexicalAnalysis() {
+        fun lexicalAnalysis(address:String) {
             //Используемые автоматы
             val autos= listOf(
-                    AutomatonXmlReader().readAutomaton("resources/KeyWordMachine.xml"),
-                    AutomatonXmlReader().readAutomaton("resources/IdMachine.xml"),
-                    AutomatonXmlReader().readAutomaton("resources/OperationEqMachine.xml"),
-                    AutomatonXmlReader().readAutomaton("resources/FloatMachine.xml")
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/CommentAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/KeyWordAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/idAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/leftBracketAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/numbersAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/OperationEqAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/OperationAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/rightBracketAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/semicolonAutomaton.xml"),
+                    AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/stringAutomaton.xml")
             )
 
             //Тестовая строка
-            val str="var founded on program is boolean for string:= 10"
+            val str=File(address).readText(Charsets.UTF_8)
             var i = 0
 
             //Проход по строке
@@ -30,7 +39,7 @@
                         .maxBy { pair ->pair.second  }
 
                 if (maxMatch != null) {
-                    println("<"+maxMatch.first+":"+str.slice(i until i+maxMatch.second)+">")
+                    println("<"+maxMatch.first+"|"+str.slice(i until i+maxMatch.second)+">")
                     i+=maxMatch.second
                 }
                 else
@@ -51,7 +60,7 @@
         fun keywordTest() {
             val readerXML = AutomatonXmlReader()
             var autoResult=readerXML
-                    .readAutomaton("resources/KeyWordMachine.xml")
+                    .readAutomaton("resources/KeyWordAutomaton.xml")
                     ?.stringSearching("var founded on program is boolean for string:= 0")
             println(autoResult)
         }
@@ -59,7 +68,7 @@
         fun eqTest() {
             val readerXML = AutomatonXmlReader()
             var autoResult=readerXML
-                    .readAutomaton("resources/OperationEqMachine.xml")
+                    .readAutomaton("resources/OperationEqAutomaton.xml")
                     ?.stringSearching("var founded on program is boolean for string:= 0")
             println(autoResult)
         }

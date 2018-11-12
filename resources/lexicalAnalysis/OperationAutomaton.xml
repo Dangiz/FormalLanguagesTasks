@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="op">
+    <state name="start" startState="true">
+        <transition word="and">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition word="or">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition word="not">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition symbol="/">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition symbol="+">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition symbol="-">
+            <destinationState name="OpFounded"/>
+        </transition>
+        <transition symbol="-">
+            <destinationState name="OpFounded"/>
+        </transition>
+    </state>
+    <state name="OpFounded" endState="true">
+    </state>
+</automaton>

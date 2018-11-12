@@ -7,11 +7,14 @@ class Automaton(val name:String,private val transitions: List<AutomatonTransitio
     private var digitKeywordFlag:Boolean
     private var digitNotZeroKeywordFlag:Boolean
     private var alphaKeywordFlag:Boolean
+    private var anyKeywordFlag:Boolean
 
     init {
         digitKeywordFlag=transitions.any{it->it.inputSymbol=="#digit"}
         digitNotZeroKeywordFlag=transitions.any{it->it.inputSymbol=="#digitNotZero"}
         alphaKeywordFlag=transitions.any{it->it.inputSymbol=="#alpha"}
+        anyKeywordFlag=transitions.any{it->it.inputSymbol=="#notBrace"}
+
     }
 
     fun transitionFunction(state:String,symbol:Char):List<String> {
@@ -23,10 +26,12 @@ class Automaton(val name:String,private val transitions: List<AutomatonTransitio
         //Обеспечивает использование к. слова #digit, обозначающего все цифры
         if(digitNotZeroKeywordFlag && symbol.isDigit())
             resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digit"}?.resultStates ?: listOf())
-        //Обеспечивает использование к. слова #digit, обозначающего все буквы
-        else if(alphaKeywordFlag && symbol.isLetter())
+        //Обеспечивает использование к. слова #alpha, обозначающего все буквы
+        if(alphaKeywordFlag && symbol.isLetter())
             resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#alpha"}?.resultStates ?: listOf())
         //Конец проверок. Добавление всех остальных переходов по введенному символу
+        if(anyKeywordFlag && symbol!='}')
+            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#notBrace"}?.resultStates ?: listOf())
         resultStates.addAll(transitions.firstOrNull {it->it.currentState==state && it.inputSymbol==symbol.toString() }?.resultStates ?: listOf())
         return resultStates
     }

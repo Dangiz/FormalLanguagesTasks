@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="num">
+    <state name="0" startState="true">
+        <transition symbol="#digitNotZero">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol=".">
+            <destinationState name="pointFounded"/>
+        </transition>
+    </state>
+    <state name="signFounded">
+        <transition symbol="#digitNotZero">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol=".">
+            <destinationState name="pointFounded"/>
+        </transition>
+    </state>
+    <state name="digitFounded" endState="true">
+        <transition symbol="#digit">
+            <destinationState name="digitFounded"/>
+        </transition>
+        <transition symbol=".">
+            <destinationState name="pointFounded"/>
+        </transition>
+        <transition symbol="e">
+            <destinationState name="eFounded"/>
+        </transition>
+    </state>
+    <state name="pointFounded">
+        <transition symbol="#digit">
+            <destinationState name="floatDigitFounded"/>
+        </transition>
+    </state>
+    <state name="floatDigitFounded" endState="true">
+        <transition symbol="#digit">
+            <destinationState name="floatDigitFounded"/>
+        </transition>
+        <transition symbol="e">
+            <destinationState name="eFounded"/>
+        </transition>
+    </state>
+    <state name="eFounded">
+        <transition symbol="+">
+            <destinationState name="eSignFounded"/>
+        </transition>
+        <transition symbol="-">
+            <destinationState name="eSignFounded"/>
+        </transition>
+        <transition symbol="#digitNotZero">
+            <destinationState name="eDigitFounded"/>
+        </transition>
+        <transition symbol=".">
+            <destinationState name="pointFounded"/>
+        </transition>
+    </state>
+    <state name="eSignFounded">
+        <transition symbol="#digit">
+            <destinationState name="eDigitFounded"/>
+        </transition>
+    </state>
+    <state name="eDigitFounded" endState="true">
+        <transition symbol="#digit">
+            <destinationState name="eDigitFounded"/>
+        </transition>
+    </state>
+</automaton>

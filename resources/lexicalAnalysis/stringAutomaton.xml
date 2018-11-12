@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="string">
+    <state name="start" startState="true">
+        <transition symbol="'">
+            <destinationState name="stringBody"/>
+        </transition>
+    </state>
+    <state name="stringBody">
+        <transition symbol="#alpha">
+            <destinationState name="stringBody"/>
+        </transition>
+        <transition symbol="#digit">
+            <destinationState name="stringBody"/>
+        </transition>
+        <transition symbol="'">
+            <destinationState name="stringTail"/>
+        </transition>
+    </state>
+    <state name="stringTail" endState="true">
+    </state>
+</automaton>

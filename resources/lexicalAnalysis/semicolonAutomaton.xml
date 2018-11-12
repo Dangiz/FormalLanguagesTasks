@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automaton name="sc">
+    <state name="start" startState="true">
+        <transition symbol=";">
+            <destinationState name="semicolon_founded"/>
+        </transition>
+    </state>
+    <state name="semicolon_founded" endState="true">
+    </state>
+</automaton>

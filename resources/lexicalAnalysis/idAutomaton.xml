@@ -2,12 +2,15 @@
 <automaton name="id">
     <state name="start" startState="true">
         <transition symbol="#alpha">
-            <destinationState name="alpha_founded"/>
+            <destinationState name="id_founded"/>
         </transition>
     </state>
-    <state name="alpha_founded" endState="true">
+    <state name="id_founded" endState="true">
+        <transition symbol="#digit">
+            <destinationState name="id_founded"/>
+        </transition>
         <transition symbol="#alpha">
-            <destinationState name="alpha_founded"/>
+            <destinationState name="id_founded"/>
         </transition>
     </state>
 </automaton>
