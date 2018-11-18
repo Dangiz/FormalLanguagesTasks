@@ -2,19 +2,40 @@ import java.io.File
 
 
 fun main(args: Array<String>) {
-            lexicalAnalysis("resources/testData/Programm_1.txt")
+            //lexicalAnalysis("resources/testData/Programm_1.txt")
+            regexGenerationTest()
+    print("abb".slice(1 until 0))
+
         }
 
-        //Проверка поиска всех вещественных чисел в указанной строке
-        fun floatMachineTest() {
-            println(AutomatonXmlReader()
-                    .readAutomaton("C:\\Users\\GizatullinDA\\Documents\\GitHub\\FormalLanguagesTasks\\resources\\FloatMachine.xml")
-                    ?.stringSearching("qweqwe12.qweq+-123eeqwe4124adl435kasf+12.5.4e+43"))
-        }
+fun regexGenerationTest() {
+    var result=GenerateAutoByRegex(":=a*b")
+    print(result?.maxString(":=aaaaab",0))
+}
 
-        fun lexicalAnalysis(address:String) {
+fun concatenateTest() {
+            val A=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/KeyWordAutomaton.xml")
+            val B=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/OperationEqAutomaton.xml")
+            val C=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/numbersAutomaton.xml")
+            var result=Concatenate(A!!,B!!)
+            result=Concatenate(result,C!!)
+            print(result.maxString("var:=100",0))
+}
+
+fun iterationTest() {
+    val A=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/KeyWordAutomaton.xml")
+    var result=Iteration(A!!)
+    print(result.maxString("",0))
+}
+
+fun stringAutoTest() {
+    val A=GenerateAutoByString("A")
+    print(A?.maxString("Abbabc",0))
+}
+
+fun lexicalAnalysis(address:String) {
             //Используемые автоматы
-            val autos= listOf(
+            val autos = listOf(
                     AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/CommentAutomaton.xml"),
                     AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/KeyWordAutomaton.xml"),
                     AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/idAutomaton.xml"),
@@ -28,48 +49,22 @@ fun main(args: Array<String>) {
             )
 
             //Тестовая строка
-            val str=File(address).readText(Charsets.UTF_8)
+            val str = File(address).readText(Charsets.UTF_8)
             var i = 0
 
             //Проход по строке
             while (i < str.length) {
-                var maxMatch= autos.map { automaton -> Pair(automaton?.maxString(str,i),automaton?.name)}
-                        .filter { pair -> pair.first?.first ?:false  }
-                        .map { pair->Pair(pair.second,pair.first?.second?:0) }
-                        .maxBy { pair ->pair.second  }
+                var maxMatch = autos.map { automaton -> Pair(automaton?.maxString(str, i), automaton?.name) }
+                        .filter { pair -> pair.first?.first ?: false }
+                        .map { pair -> Pair(pair.second, pair.first?.second ?: 0) }
+                        .maxBy { pair -> pair.second }
 
                 if (maxMatch != null) {
-                    println("<"+maxMatch.first+"|"+str.slice(i until i+maxMatch.second)+">")
-                    i+=maxMatch.second
-                }
-                else
+                    println("<" + maxMatch.first + "|" + str.slice(i until i + maxMatch.second) + ">")
+                    i += maxMatch.second
+                } else
                     i++
 
             }
-
-        }
-
-        //Проверка работы недетерминированного автомата
-        fun undeterminitedTest() {
-            val readerXML = AutomatonXmlReader()
-            val autoResult = readerXML.readAutomaton("C:\\Users\\GizatullinDA\\Downloads\\FormalLanguagesTasks-master\\resources\\NonDeterminited.xml")
-                    ?.transitionFunction("2",'a')
-            println(autoResult)
-        }
-
-        fun keywordTest() {
-            val readerXML = AutomatonXmlReader()
-            var autoResult=readerXML
-                    .readAutomaton("resources/KeyWordAutomaton.xml")
-                    ?.stringSearching("var founded on program is boolean for string:= 0")
-            println(autoResult)
-        }
-
-        fun eqTest() {
-            val readerXML = AutomatonXmlReader()
-            var autoResult=readerXML
-                    .readAutomaton("resources/OperationEqAutomaton.xml")
-                    ?.stringSearching("var founded on program is boolean for string:= 0")
-            println(autoResult)
         }
 

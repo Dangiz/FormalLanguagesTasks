@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <automaton name="id">
-    <state name="start" startState="true">
+    <state name="idstart" startState="true">
         <transition symbol="#alpha">
             <destinationState name="id_founded"/>
         </transition>

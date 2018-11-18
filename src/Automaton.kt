@@ -1,7 +1,7 @@
 class AutomatonTransition(val currentState:String,val inputSymbol:String,val resultStates:List<String>)
 
 //Автомат определяется тройкой: набор переходов, начальных и конечных состояний
-class Automaton(val name:String,private val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
+class Automaton(val name:String,val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
 
     //Флаги для оптимизации использования ключевых слов в xml
     private var digitKeywordFlag:Boolean
@@ -16,6 +16,8 @@ class Automaton(val name:String,private val transitions: List<AutomatonTransitio
         anyKeywordFlag=transitions.any{it->it.inputSymbol=="#notBrace"}
 
     }
+
+
 
     fun transitionFunction(state:String,symbol:Char):List<String> {
         val resultStates= mutableListOf<String>()
@@ -68,3 +70,90 @@ class Automaton(val name:String,private val transitions: List<AutomatonTransitio
         return  result
     }
 }
+
+fun Concatenate(A:Automaton,B:Automaton):Automaton {
+    var newTransitions= mutableListOf<AutomatonTransition>()
+
+
+    newTransitions.addAll(B.transitions)
+    newTransitions.addAll(A.transitions.map{
+        automatonTransition -> if(automatonTransition.resultStates.any{s ->A.endStates.contains(s)  }) {
+            val transitions= automatonTransition.resultStates.toMutableList()
+            transitions.addAll(B.startStates)
+            AutomatonTransition(automatonTransition.currentState,automatonTransition.inputSymbol,transitions)
+        }
+        else automatonTransition
+    })
+
+    return Automaton("",newTransitions,A.startStates,B.endStates)
+}
+
+fun Iteration(A:Automaton):Automaton {
+    var endStates= mutableSetOf<String>()
+    endStates.addAll(A.endStates)
+    endStates.addAll(A.startStates)
+
+    var newTransitions= mutableListOf<AutomatonTransition>()
+    newTransitions.addAll(A.transitions.map{
+        automatonTransition -> if(automatonTransition.resultStates.any{s ->A.endStates.contains(s)  }) {
+        val transitions= automatonTransition.resultStates.toMutableList()
+        transitions.addAll(A.startStates)
+        AutomatonTransition(automatonTransition.currentState,automatonTransition.inputSymbol,transitions)
+    }
+    else automatonTransition
+    })
+
+    return Automaton(A.name,newTransitions,A.startStates,endStates)
+}
+
+fun GenerateAutoByString(string:String):Automaton {
+    var startStates= setOf("$string start")
+    var endStates= setOf("$string end")
+    var currentState=startStates.first()
+    var transitions= mutableListOf<AutomatonTransition>()
+
+    for(i in 0 until string.length-1)
+    {
+        val symbol=string[i].toString()
+        val resultState="$currentState : $symbol founded in word $string"
+        transitions.add(AutomatonTransition(currentState,symbol, listOf(resultState)))
+        currentState=resultState
+    }
+
+    val symbol=string.last().toString()
+    val resultState="End state. $currentState : $symbol founded in word $string"
+    transitions.add(AutomatonTransition(currentState,symbol, endStates.toList()))
+    return Automaton("$string automaton",transitions,startStates,endStates)
+}
+
+fun CharIsOperator(char:Char):Boolean {
+    return char=='|' || char=='(' || char==')' || char=='*'
+}
+
+fun GenerateAutoByRegex(regex:String):Automaton? {
+    if(regex.isEmpty())
+        return null
+    var resultAuto:Automaton?=null
+
+    if(!regex.any{c ->CharIsOperator(c)  }){
+        return GenerateAutoByString(regex)
+    }
+    var firstOpId=regex.indexOf(regex.find { c->CharIsOperator(c) }!!)
+
+    if(regex[firstOpId]=='*') {
+        when(firstOpId) {
+            1 ->resultAuto=Iteration(GenerateAutoByString(regex[firstOpId - 1].toString()))
+            else->resultAuto = Concatenate(
+                    GenerateAutoByString(regex.slice(0 until firstOpId - 1)),
+                    Iteration(GenerateAutoByString(regex[firstOpId - 1].toString())))
+        }
+
+        val other=GenerateAutoByRegex(regex.slice(firstOpId+1 until regex.length))
+        if(other!=null)
+            resultAuto=Concatenate(resultAuto,other)
+
+    }
+
+    return resultAuto
+}
+

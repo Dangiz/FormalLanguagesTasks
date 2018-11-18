@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <automaton name="kw">
-    <state name="start" startState="true">
+    <state name="kwstart" startState="true">
         <transition word="var">
             <destinationState name="var_founded"/>
         </transition>
