@@ -1,4 +1,4 @@
-class AutomatonTransition(val currentState:String,val inputSymbol:String,val resultStates:List<String>)
+class AutomatonTransition(val currentState:String,val inputSymbol:String,var resultStates:List<String>)
 
 //Автомат определяется тройкой: набор переходов, начальных и конечных состояний
 class Automaton(val name:String,val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
@@ -106,18 +106,54 @@ fun Iteration(A:Automaton):Automaton {
     return Automaton(A.name,newTransitions,A.startStates,endStates)
 }
 
-fun GenerateAutoByString(string:String):Automaton {
+fun Union(A:Automaton,B: Automaton):Automaton {
+    var newTransitions= mutableListOf<AutomatonTransition>()
+
+
+    newTransitions.addAll(A.transitions)
+    for(transition in B.transitions) {
+        var eqTran=newTransitions.firstOrNull{newTransition->newTransition.currentState==transition.currentState && newTransition.inputSymbol==transition.inputSymbol }
+        if(eqTran!=null)
+        {
+            val temp=eqTran.resultStates.toMutableList()
+            temp.addAll(transition.resultStates)
+            eqTran.resultStates=temp
+        }
+        else
+        {
+            newTransitions.add(transition)
+        }
+    }
+    val newStartStates= mutableSetOf<String>()
+    newStartStates.addAll(A.startStates)
+    newStartStates.addAll(B.startStates)
+    val newEndStates= mutableSetOf<String>()
+    newEndStates.addAll(A.endStates)
+    newEndStates.addAll(B.endStates)
+    return Automaton("${A.name} ${B.name} auto",newTransitions,newStartStates,newEndStates)
+}
+
+fun GenerateAutoByString(string:String):Automaton{
     var startStates= setOf("$string start")
     var endStates= setOf("$string end")
     var currentState=startStates.first()
     var transitions= mutableListOf<AutomatonTransition>()
-
-    for(i in 0 until string.length-1)
+    var i=0
+    while(i <string.length-1)
     {
         val symbol=string[i].toString()
-        val resultState="$currentState : $symbol founded in word $string"
-        transitions.add(AutomatonTransition(currentState,symbol, listOf(resultState)))
-        currentState=resultState
+        if(symbol=="/" && i<string.length-1 && string[i+1]=='d') {
+            val resultState = "$currentState : #digit founded in word $string"
+            transitions.add(AutomatonTransition(currentState, "#digit", listOf(resultState)))
+            currentState = resultState
+            i++
+        }
+        else {
+            val resultState = "$currentState : $symbol founded in word $string"
+            transitions.add(AutomatonTransition(currentState, symbol, listOf(resultState)))
+            currentState = resultState
+        }
+        i++
     }
 
     val symbol=string.last().toString()
@@ -135,9 +171,11 @@ fun GenerateAutoByRegex(regex:String):Automaton? {
         return null
     var resultAuto:Automaton?=null
 
+
     if(!regex.any{c ->CharIsOperator(c)  }){
         return GenerateAutoByString(regex)
     }
+
     var firstOpId=regex.indexOf(regex.find { c->CharIsOperator(c) }!!)
 
     if(regex[firstOpId]=='*') {
@@ -148,11 +186,46 @@ fun GenerateAutoByRegex(regex:String):Automaton? {
                     Iteration(GenerateAutoByString(regex[firstOpId - 1].toString())))
         }
 
-        val other=GenerateAutoByRegex(regex.slice(firstOpId+1 until regex.length))
-        if(other!=null)
-            resultAuto=Concatenate(resultAuto,other)
-
     }
+
+    else if(regex[firstOpId]=='(') {
+        var colonCount=1
+        var colonId=-1
+        for(i in firstOpId+1 until regex.length) {
+            if(regex[i]==')') {
+                colonCount--
+            }
+            else if(regex[i]=='(')
+                colonCount++
+            if(colonCount==0) {
+                colonId=i
+                break
+            }
+        }
+
+        if(colonId==-1)
+            return null
+        resultAuto=GenerateAutoByRegex(regex.slice(firstOpId+1 until colonId))
+
+        if(colonId<regex.length-1 && regex[colonId+1]=='*') {
+            colonId++
+            resultAuto = Iteration(resultAuto!!)
+        }
+
+        if(firstOpId!=0)
+            Concatenate(GenerateAutoByString(regex.slice(0 until firstOpId - 1)),resultAuto!!)
+        firstOpId=colonId
+    }
+
+    if(regex.any { c->c=='|'}) {
+        val unionOp=regex.indexOf('|')
+        return Union(GenerateAutoByRegex(regex.slice(0 until unionOp))!!,
+                GenerateAutoByRegex(regex.slice(unionOp+1 until regex.length))!!)
+    }
+
+
+
+
 
     return resultAuto
 }

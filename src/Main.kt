@@ -2,15 +2,20 @@ import java.io.File
 
 
 fun main(args: Array<String>) {
-            //lexicalAnalysis("resources/testData/Programm_1.txt")
-            regexGenerationTest()
-    print("abb".slice(1 until 0))
-
-        }
+    //lexicalAnalysis("resources/testData/Programm_1.txt")
+    regexGenerationTest()
+}
 
 fun regexGenerationTest() {
-    var result=GenerateAutoByRegex(":=a*b")
-    print(result?.maxString(":=aaaaab",0))
+    var result=GenerateAutoByRegex("(a|b)")
+    print(result?.maxString("1234",0))
+}
+
+fun UnionTest(){
+    val A=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/KeyWordAutomaton.xml")
+    val B=AutomatonXmlReader().readAutomaton("resources/lexicalAnalysis/OperationEqAutomaton.xml")
+    var result=Union(A!!,B!!)
+    print(result.maxString(":=",0))
 }
 
 fun concatenateTest() {
