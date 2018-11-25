@@ -1,7 +1,7 @@
 class AutomatonTransition(val currentState:String,val inputSymbol:String,var resultStates:List<String>)
 
 //Автомат определяется тройкой: набор переходов, начальных и конечных состояний
-class Automaton(val name:String,val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
+class Automaton(var name:String,val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
 
     //Флаги для оптимизации использования ключевых слов в xml
     private var digitKeywordFlag:Boolean
@@ -23,11 +23,11 @@ class Automaton(val name:String,val transitions: List<AutomatonTransition>, val 
         val resultStates= mutableListOf<String>()
         //Далее проверки для использования ключевых слов, обозначающих множество входных символов для переходов автомата
         //Обеспечивает использование к. слова #digitNoneZero, обозначающего все цифры от 1 до 9
-        if(digitKeywordFlag && CharRange('1','9').contains(symbol))
-            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digitNotZero"}?.resultStates ?: listOf())
-        //Обеспечивает использование к. слова #digit, обозначающего все цифры
-        if(digitNotZeroKeywordFlag && symbol.isDigit())
+        if(digitKeywordFlag && symbol.isDigit() )
             resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digit"}?.resultStates ?: listOf())
+        //Обеспечивает использование к. слова #digit, обозначающего все цифры
+        if(digitNotZeroKeywordFlag && CharRange('1','9').contains(symbol))
+            resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#digitNotZero"}?.resultStates ?: listOf())
         //Обеспечивает использование к. слова #alpha, обозначающего все буквы
         if(alphaKeywordFlag && symbol.isLetter())
             resultStates.addAll(transitions.firstOrNull{it->it.currentState==state && it.inputSymbol=="#alpha"}?.resultStates ?: listOf())
@@ -71,10 +71,15 @@ class Automaton(val name:String,val transitions: List<AutomatonTransition>, val 
     }
 }
 
-fun Concatenate(A:Automaton,B:Automaton):Automaton {
+fun Concatenate(A:Automaton?,B:Automaton?):Automaton? {
+    if(A==null && B==null)
+        return null
+    if(A==null)
+        return B
+    if(B==null)
+        return A
+
     var newTransitions= mutableListOf<AutomatonTransition>()
-
-
     newTransitions.addAll(B.transitions)
     newTransitions.addAll(A.transitions.map{
         automatonTransition -> if(automatonTransition.resultStates.any{s ->A.endStates.contains(s)  }) {
@@ -106,7 +111,14 @@ fun Iteration(A:Automaton):Automaton {
     return Automaton(A.name,newTransitions,A.startStates,endStates)
 }
 
-fun Union(A:Automaton,B: Automaton):Automaton {
+fun Union(A:Automaton?,B: Automaton?):Automaton? {
+    if(A==null && B==null)
+        return null
+    if(A==null)
+        return B
+    if(B==null)
+        return A
+
     var newTransitions= mutableListOf<AutomatonTransition>()
 
 
@@ -133,100 +145,38 @@ fun Union(A:Automaton,B: Automaton):Automaton {
     return Automaton("${A.name} ${B.name} auto",newTransitions,newStartStates,newEndStates)
 }
 
-fun GenerateAutoByString(string:String):Automaton{
-    var startStates= setOf("$string start")
-    var endStates= setOf("$string end")
+fun GenerateAutoByString(string:String,autoName:String):Automaton{
+    var startStates= setOf("[$autoName] $string start")
+    var endStates= setOf("[$autoName] $string end")
     var currentState=startStates.first()
     var transitions= mutableListOf<AutomatonTransition>()
     var i=0
     while(i <string.length-1)
     {
-        val symbol=string[i].toString()
-        if(symbol=="/" && i<string.length-1 && string[i+1]=='d') {
-            val resultState = "$currentState : #digit founded in word $string"
-            transitions.add(AutomatonTransition(currentState, "#digit", listOf(resultState)))
-            currentState = resultState
+        var symbol=string[i].toString()
+        if(symbol=="/") {
+            if(string[i+1].toString()=="d")
+                symbol="#digit"
+            if(string[i+1].toString()=="a")
+                symbol="#alpha"
             i++
+
+            if(i==string.length-1) {
+                transitions.add(AutomatonTransition(currentState, symbol, endStates.toList()))
+                return Automaton(autoName, transitions, startStates, endStates)
+            }
         }
-        else {
-            val resultState = "$currentState : $symbol founded in word $string"
-            transitions.add(AutomatonTransition(currentState, symbol, listOf(resultState)))
-            currentState = resultState
-        }
+        val resultState = "[$autoName] $currentState : $symbol founded in word $string"
+        transitions.add(AutomatonTransition(currentState, symbol, listOf(resultState)))
+        currentState = resultState
         i++
     }
 
     val symbol=string.last().toString()
-    val resultState="End state. $currentState : $symbol founded in word $string"
     transitions.add(AutomatonTransition(currentState,symbol, endStates.toList()))
-    return Automaton("$string automaton",transitions,startStates,endStates)
+    return Automaton(autoName,transitions,startStates,endStates)
 }
 
-fun CharIsOperator(char:Char):Boolean {
-    return char=='|' || char=='(' || char==')' || char=='*'
-}
-
-fun GenerateAutoByRegex(regex:String):Automaton? {
-    if(regex.isEmpty())
-        return null
-    var resultAuto:Automaton?=null
 
 
-    if(!regex.any{c ->CharIsOperator(c)  }){
-        return GenerateAutoByString(regex)
-    }
-
-    var firstOpId=regex.indexOf(regex.find { c->CharIsOperator(c) }!!)
-
-    if(regex[firstOpId]=='*') {
-        when(firstOpId) {
-            1 ->resultAuto=Iteration(GenerateAutoByString(regex[firstOpId - 1].toString()))
-            else->resultAuto = Concatenate(
-                    GenerateAutoByString(regex.slice(0 until firstOpId - 1)),
-                    Iteration(GenerateAutoByString(regex[firstOpId - 1].toString())))
-        }
-
-    }
-
-    else if(regex[firstOpId]=='(') {
-        var colonCount=1
-        var colonId=-1
-        for(i in firstOpId+1 until regex.length) {
-            if(regex[i]==')') {
-                colonCount--
-            }
-            else if(regex[i]=='(')
-                colonCount++
-            if(colonCount==0) {
-                colonId=i
-                break
-            }
-        }
-
-        if(colonId==-1)
-            return null
-        resultAuto=GenerateAutoByRegex(regex.slice(firstOpId+1 until colonId))
-
-        if(colonId<regex.length-1 && regex[colonId+1]=='*') {
-            colonId++
-            resultAuto = Iteration(resultAuto!!)
-        }
-
-        if(firstOpId!=0)
-            Concatenate(GenerateAutoByString(regex.slice(0 until firstOpId - 1)),resultAuto!!)
-        firstOpId=colonId
-    }
-
-    if(regex.any { c->c=='|'}) {
-        val unionOp=regex.indexOf('|')
-        return Union(GenerateAutoByRegex(regex.slice(0 until unionOp))!!,
-                GenerateAutoByRegex(regex.slice(unionOp+1 until regex.length))!!)
-    }
-
-
-
-
-
-    return resultAuto
-}
 

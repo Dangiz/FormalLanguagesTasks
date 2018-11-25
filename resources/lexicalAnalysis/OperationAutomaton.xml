@@ -16,6 +16,9 @@
         <transition symbol="+">
             <destinationState name="OpFounded"/>
         </transition>
+        <transition symbol="*">
+            <destinationState name="OpFounded"/>
+        </transition>
         <transition symbol="-">
             <destinationState name="OpFounded"/>
         </transition>
