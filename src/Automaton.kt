@@ -159,6 +159,10 @@ fun GenerateAutoByString(string:String,autoName:String):Automaton{
                 symbol="#digit"
             if(string[i+1].toString()=="a")
                 symbol="#alpha"
+            if(string[i+1].toString()==")")
+                symbol=")"
+            if(string[i+1].toString()=="(")
+                symbol="("
             i++
 
             if(i==string.length-1) {
@@ -166,6 +170,10 @@ fun GenerateAutoByString(string:String,autoName:String):Automaton{
                 return Automaton(autoName, transitions, startStates, endStates)
             }
         }
+        if(symbol=="[")
+            symbol="("
+        if(symbol=="]")
+            symbol=")"
         val resultState = "[$autoName] $currentState : $symbol founded in word $string"
         transitions.add(AutomatonTransition(currentState, symbol, listOf(resultState)))
         currentState = resultState

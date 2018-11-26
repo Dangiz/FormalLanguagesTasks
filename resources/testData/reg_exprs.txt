@@ -1,0 +1,10 @@
+com {(/a)*}
+kw program|var|real|string|boolean|if|then|else|for|to|do|begin|end
+id (/a)((/a)|(/d))*
+lb (
+num ((/d))(/d)*
+op_eq :=
+op +|-|\|⋅
+rb )
+sc ;
+str '(/a)(/a)*'

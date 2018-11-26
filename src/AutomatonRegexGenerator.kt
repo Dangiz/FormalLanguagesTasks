@@ -1,4 +1,4 @@
-
+import java.io.File
 
 fun CharIsOperator(char:Char):Boolean {
     return char=='|' || char=='(' || char==')' || char=='*'
@@ -83,4 +83,22 @@ fun GenerateAutoByRegex(regex:String,autoName:String):Automaton? {
         return Concatenate(resultAuto,GenerateAutoByRegex(regex.slice(firstOpId+1 until regex.length),"$autoName % "))
     else
         return resultAuto
+}
+
+
+fun ReadRegexes(fileAddress:String):List<Automaton> {
+    var list= mutableListOf<Automaton>()
+    val lines=File(fileAddress).readLines()
+    for(str in lines)
+    {
+        val split=str.split(" ")
+        val  auto:Automaton
+        if(split[1].length==1)
+          auto=GenerateAutoByString(split[1],split[0])
+           else
+            auto=GenerateAutoByRegex(split[1],split[0])!!
+        auto?.name=split[0]
+        list.add(auto!!)
+    }
+    return list
 }
