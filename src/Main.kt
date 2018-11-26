@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
 //(+|-)(1|2|3|4|5|6|7|8|9)(.(0|1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)*)*
 
 fun regexGenerationTest() {
-    var result=GenerateAutoByRegex("/(","reg")
+    var result=generateAutoByRegex("/(","reg")
     print(result?.maxString("(",0))
 }
 
@@ -43,7 +43,7 @@ fun stringAutoTest() {
 fun lexicalAnalysis(address:String) {
 
     //Используемые автоматы
-    val autos = ReadRegexes("resources/testData/reg_exprs.txt")
+    val autos = readRegexes("resources/testData/reg_exprs.txt")
 
     //Тестовая строка
     val str = File(address).readText(Charsets.UTF_8)

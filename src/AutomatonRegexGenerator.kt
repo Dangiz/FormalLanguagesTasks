@@ -1,10 +1,10 @@
 import java.io.File
 
-fun CharIsOperator(char:Char):Boolean {
+fun charIsOperator(char:Char):Boolean {
     return char=='|' || char=='(' || char==')' || char=='*'
 }
 
-fun FindRightBracket(string: String,leftBracketPoisition :Int):Int{
+fun findRightBracket(string: String, leftBracketPoisition :Int):Int{
     var bracketCount=1
     var bracketId=-1
     for(i in leftBracketPoisition+1 until string.length) {
@@ -21,36 +21,36 @@ fun FindRightBracket(string: String,leftBracketPoisition :Int):Int{
     return bracketId
 }
 
-fun FindNextUnionOp(regex: String):Int{
+fun findNextUnionOp(regex: String):Int{
     var i=0
     while(i<regex.length){
         if(regex[i]=='|')
             return i
         if(regex[i]=='(')
-            i=FindRightBracket(regex,i)+1
+            i=findRightBracket(regex,i)+1
         else i++
     }
     return -1
 }
 
-fun GenerateAutoByRegex(regex:String,autoName:String):Automaton? {
+fun generateAutoByRegex(regex:String, autoName:String):Automaton? {
     if(regex.isEmpty())
         return null
     var resultAuto:Automaton?=null
 
     //Если строка не содержит операторов
-    if(!regex.any{c ->CharIsOperator(c)}){
+    if(regex.length==1 || !regex.any{c ->charIsOperator(c)}){
         return GenerateAutoByString(regex,"$autoName string $regex")
     }
 
     //Если строка содержит оператор объединения на текущем уровне
-    var unionId=FindNextUnionOp(regex)
+    var unionId=findNextUnionOp(regex)
     if(unionId!=-1) {
-        return Union(GenerateAutoByRegex(regex.slice(0 until unionId),"$autoName | left")!!,
-                GenerateAutoByRegex(regex.slice(unionId+1 until regex.length),"$autoName | right")!!)
+        return Union(generateAutoByRegex(regex.slice(0 until unionId),"$autoName | left")!!,
+                generateAutoByRegex(regex.slice(unionId+1 until regex.length),"$autoName | right")!!)
     }
 
-    var firstOpId=regex.indexOf(regex.find { c->CharIsOperator(c) }!!)
+    var firstOpId=regex.indexOf(regex.find { c->charIsOperator(c) }!!)
 
     if(regex[firstOpId]=='*') {
         when(firstOpId) {
@@ -63,11 +63,11 @@ fun GenerateAutoByRegex(regex:String,autoName:String):Automaton? {
     }
 
     else if(regex[firstOpId]=='(') {
-        var bracketId=FindRightBracket(regex,firstOpId)
+        var bracketId=findRightBracket(regex,firstOpId)
 
         if(bracketId==-1)
             return null
-        resultAuto=GenerateAutoByRegex(regex.slice(firstOpId+1 until bracketId),"$autoName brackets inside")
+        resultAuto=generateAutoByRegex(regex.slice(firstOpId+1 until bracketId),"$autoName brackets inside")
 
         if(bracketId<regex.length-1 && regex[bracketId+1]=='*') {
             bracketId++
@@ -80,25 +80,22 @@ fun GenerateAutoByRegex(regex:String,autoName:String):Automaton? {
     }
 
     if(firstOpId!=regex.length-1)
-        return Concatenate(resultAuto,GenerateAutoByRegex(regex.slice(firstOpId+1 until regex.length),"$autoName % "))
+        return Concatenate(resultAuto,generateAutoByRegex(regex.slice(firstOpId+1 until regex.length),"$autoName % "))
     else
         return resultAuto
 }
 
-
-fun ReadRegexes(fileAddress:String):List<Automaton> {
-    var list= mutableListOf<Automaton>()
+fun readRegexes(fileAddress:String):List<Automaton> {
+    var list= mutableListOf<Pair<Int,Automaton>>()
     val lines=File(fileAddress).readLines()
     for(str in lines)
     {
         val split=str.split(" ")
         val  auto:Automaton
-        if(split[1].length==1)
-          auto=GenerateAutoByString(split[1],split[0])
-           else
-            auto=GenerateAutoByRegex(split[1],split[0])!!
-        auto?.name=split[0]
-        list.add(auto!!)
+        auto=generateAutoByRegex(split[2],split[1])!!
+        auto.name=split[1]
+        list.add(Pair(split[0].toInt(),auto))
     }
-    return list
+    list.sortBy { pair->pair.first }
+    return list.map { pair->pair.second }
 }
