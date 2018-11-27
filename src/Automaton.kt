@@ -2,7 +2,6 @@ class AutomatonTransition(val currentState:String,val inputSymbol:String,var res
 
 //Автомат определяется тройкой: набор переходов, начальных и конечных состояний
 class Automaton(var name:String,val transitions: List<AutomatonTransition>, val startStates:Set<String>, val endStates:Set<String>) {
-
     //Флаги для оптимизации использования ключевых слов в xml
     private var digitKeywordFlag:Boolean
     private var digitNotZeroKeywordFlag:Boolean
@@ -16,8 +15,6 @@ class Automaton(var name:String,val transitions: List<AutomatonTransition>, val 
         anyKeywordFlag=transitions.any{it->it.inputSymbol=="#notBrace"}
 
     }
-
-
 
     fun transitionFunction(state:String,symbol:Char):List<String> {
         val resultStates= mutableListOf<String>()
@@ -53,7 +50,6 @@ class Automaton(var name:String,val transitions: List<AutomatonTransition>, val 
         return result
     }
 
-
     //Вывод всех подстрок строки, удовлетворяющих поведению атвомата
     fun stringSearching(str:String):List<String> {
         val result = mutableListOf<String>()
@@ -83,14 +79,17 @@ fun Concatenate(A:Automaton?,B:Automaton?):Automaton? {
     newTransitions.addAll(B.transitions)
     newTransitions.addAll(A.transitions.map{
         automatonTransition -> if(automatonTransition.resultStates.any{s ->A.endStates.contains(s)  }) {
-            val transitions= automatonTransition.resultStates.toMutableList()
-            transitions.addAll(B.startStates)
-            AutomatonTransition(automatonTransition.currentState,automatonTransition.inputSymbol,transitions)
+            val endStates= automatonTransition.resultStates.toMutableList()
+            endStates.addAll(B.startStates)
+            AutomatonTransition(automatonTransition.currentState,automatonTransition.inputSymbol,endStates)
         }
         else automatonTransition
     })
-
-    return Automaton("",newTransitions,A.startStates,B.endStates)
+    var startStates= mutableSetOf<String>()
+    startStates.addAll(A.startStates)
+    if(startStates.any{s ->A.endStates.contains(s)})
+        startStates.addAll(B.startStates)
+    return Automaton("",newTransitions,startStates,B.endStates)
 }
 
 fun Iteration(A:Automaton):Automaton {

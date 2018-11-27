@@ -9,8 +9,8 @@ fun main(args: Array<String>) {
 //(+|-)(1|2|3|4|5|6|7|8|9)(.(0|1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)*)*
 
 fun regexGenerationTest() {
-    var result=generateAutoByRegex("/(","reg")
-    print(result?.maxString("(",0))
+    var result=generateAutoByRegex("(00|11)*((01|10)(00|11)*(01|10)(00|11)*)*","reg")
+    print(result?.maxString("1000000001",0))
 }
 
 fun UnionTest(){
@@ -56,7 +56,7 @@ fun lexicalAnalysis(address:String) {
                 .map { pair -> Pair(pair.second, pair.first?.second ) }
                 .maxBy { pair -> pair.second }
 
-        if (maxMatch != null) {
+        if (maxMatch != null && maxMatch.second!=0) {
             println("<" + maxMatch.first + "|" + str.slice(i until i + maxMatch.second) + ">")
             i += maxMatch.second
         } else

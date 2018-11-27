@@ -1,10 +1,10 @@
 import java.io.File
 
-fun charIsOperator(char:Char):Boolean {
+private fun charIsOperator(char:Char):Boolean {
     return char=='|' || char=='(' || char==')' || char=='*'
 }
 
-fun findRightBracket(string: String, leftBracketPoisition :Int):Int{
+private fun findRightBracket(string: String, leftBracketPoisition :Int):Int{
     var bracketCount=1
     var bracketId=-1
     for(i in leftBracketPoisition+1 until string.length) {
